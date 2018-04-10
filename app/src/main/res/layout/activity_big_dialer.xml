@@ -1,0 +1,298 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BigDialer"
+    style="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0099cc"
+    android:foregroundGravity="center_vertical|center_horizontal"
+    android:keepScreenOn="true"
+    android:visibility="visible"
+    tools:context="com.jtjsoftware.bigdialer.BigDialer">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <RelativeLayout
+        android:id="@+id/textArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal|fill_horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/numberAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal|fill_horizontal|start"
+            android:hint="Number To Dial"
+            android:keepScreenOn="true"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/DialPad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textArea"
+        android:layout_marginTop="17dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/dialRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:soundEffectsEnabled="true"
+                android:tag="1"
+                android:text="1"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:tag="2"
+                android:text="2"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:onClick="dialNumber"
+                android:tag="3"
+                android:text="3"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dialRow1"
+            android:layout_marginTop="17dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="4"
+                android:text="4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="5"
+                android:text="5"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="6"
+                android:text="6"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dialRow2"
+            android:layout_marginTop="17dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="7"
+                android:text="7"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="8"
+                android:text="8"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="9"
+                android:text="9"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dialRow3"
+            android:layout_marginTop="17dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dialNumber"
+                android:padding="10dp"
+                android:tag="0"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Hangup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialRow4"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:onClick="endPhoneCall"
+                android:text="Hangup"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="callNumber"
+                android:soundEffectsEnabled="true"
+                android:text="   Dial   "
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ActionBtnRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Hangup"
+            android:layout_marginTop="17dp"
+            android:gravity="center_horizontal"
+
+            android:visibility="visible">
+
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clearNumber"
+                android:text="EXTRA"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="answerPhoneCall"
+                android:text="Answer Call"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
